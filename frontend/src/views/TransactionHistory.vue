@@ -96,7 +96,7 @@ export default {
         if (!token) return;
 
         // Update the API endpoint to match your backend route
-        const res = await axios.get("http://localhost:8081/api/transaction-history", {
+        const res = await axios.get("https://gasfee-evw8.onrender.com/api/transaction-history", {
           headers: { Authorization: `Bearer ${token}` },
           params: { email: localStorage.getItem('email') }
         });

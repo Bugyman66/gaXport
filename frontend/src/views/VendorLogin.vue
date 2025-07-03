@@ -47,7 +47,7 @@ export default {
         this.isLogging = true;
         this.error = null;
         
-        const response = await fetch('http://localhost:8081/api/vendor/login', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/vendor/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

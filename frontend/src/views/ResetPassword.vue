@@ -24,7 +24,7 @@ export default {
   methods: {
     async resetPassword() {
       try {
-        const response = await axios.post("http://localhost:5000/api/auth/reset-password", {
+        const response = await axios.post("https://gasfee-evw8.onrender.com/api/auth/reset-password", {
           token: this.token,
           newPassword: this.newPassword,
         });

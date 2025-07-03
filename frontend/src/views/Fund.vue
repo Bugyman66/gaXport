@@ -172,7 +172,7 @@ export default {
       console.log("Verifying transaction for reference:", reference);
 
       try {
-        const response = await fetch("http://localhost:8081/api/paystack/verify-payment", {
+        const response = await fetch("https://gasfee-evw8.onrender.com/api/paystack/verify-payment", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -200,7 +200,7 @@ export default {
         this.loading = true;
         this.error = null;
         
-        const response = await fetch('http://localhost:8081/api/vendor/active');
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/vendor/active');
         if (!response.ok) {
           throw new Error('Failed to fetch vendors');
         }

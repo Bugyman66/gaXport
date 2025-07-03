@@ -72,7 +72,7 @@ export default {
         this.loading = true;
         this.error = null;
         
-        const response = await fetch('http://localhost:8081/api/vendor/active');
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/vendor/active');
         if (!response.ok) {
           throw new Error('Failed to fetch vendors');
         }
@@ -272,4 +272,4 @@ export default {
 .select-vendor-btn:hover {
   background: #00e6db;
 }
-</style> 
+</style>

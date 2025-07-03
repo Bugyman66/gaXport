@@ -147,7 +147,7 @@ export default {
         return;
       }
 
-      fetch("http://localhost:8081/api/auth/me", {
+      fetch("https://gasfee-evw8.onrender.com/api/auth/me", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -176,7 +176,7 @@ export default {
         return;
       }
 
-      fetch(`http://localhost:8081/api/user/balance?email=${this.user.email}`, {
+      fetch(`https://gasfee-evw8.onrender.com/api/user/balance?email=${this.user.email}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

@@ -135,7 +135,7 @@ export default {
 
       try {
         const token = localStorage.getItem('vendor_token');
-        const response = await fetch('http://localhost:8081/api/vendor/profile', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/vendor/profile', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -169,7 +169,7 @@ export default {
 
       try {
         const token = localStorage.getItem('vendor_token');
-        const response = await fetch('http://localhost:8081/api/vendor/profile', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/vendor/profile', {
           method: 'PUT',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -205,7 +205,7 @@ export default {
     async toggleStatus() {
       try {
         const token = localStorage.getItem('vendor_token');
-        const response = await fetch('http://localhost:8081/api/vendor/toggle-status', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/vendor/toggle-status', {
           method: 'PUT',
           headers: {
             'Authorization': `Bearer ${token}`
@@ -524,4 +524,4 @@ export default {
     width: 100%;
   }
 }
-</style> 
+</style>

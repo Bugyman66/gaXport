@@ -187,7 +187,7 @@ export default {
     async fetchDashboardData() {
       try {
         const token = localStorage.getItem('vendor_token');
-        const response = await fetch('http://localhost:8081/api/vendor/dashboard', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/vendor/dashboard', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -215,7 +215,7 @@ export default {
       this.isSearching = true;
       try {
         const token = localStorage.getItem('vendor_token');
-        const response = await fetch(`http://localhost:8081/api/vendor/search-user?email=${this.balanceData.userEmail}`, {
+        const response = await fetch(`https://gasfee-evw8.onrender.com/api/vendor/search-user?email=${this.balanceData.userEmail}`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -246,7 +246,7 @@ export default {
         this.isProcessing = true;
         const token = localStorage.getItem('vendor_token');
         
-        const response = await fetch('http://localhost:8081/api/vendor/transfer-balance', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/vendor/transfer-balance', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

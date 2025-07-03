@@ -65,7 +65,7 @@ export default {
         this.isRegistering = true;
         this.error = null;
         
-        const response = await fetch('http://localhost:8081/api/vendor/register', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/vendor/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

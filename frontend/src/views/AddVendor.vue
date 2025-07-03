@@ -106,7 +106,7 @@ export default {
 
       try {
         const token = localStorage.getItem('admin_token');
-        const response = await fetch('http://localhost:8081/api/admin/create-vendor', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/admin/create-vendor', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

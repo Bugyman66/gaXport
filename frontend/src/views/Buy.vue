@@ -192,7 +192,7 @@ export default {
 
     async fetchUsdToNgnRate() {
       try {
-        const response = await fetch('http://localhost:8081/api/exchange-rate');
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/exchange-rate');
         const data = await response.json();
         if (response.ok) {
           this.usdToNgnRate = data.rate;
@@ -234,7 +234,7 @@ export default {
         }
 
         const response = await axios.post(
-          "http://localhost:8081/api/buy",
+          "https://gasfee-evw8.onrender.com/api/buy",
           {
             crypto: this.crypto,
             amount: this.amount,

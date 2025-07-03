@@ -57,7 +57,7 @@
 </template>
 
 <script>
-const API_BASE_URL = 'http://localhost:8081/api';
+const API_BASE_URL = 'https://gasfee-evw8.onrender.com/api';
 
 export default {
   name: 'SecuritySettings',

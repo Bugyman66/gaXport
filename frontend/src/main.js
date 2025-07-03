@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:8081/api'
+axios.defaults.baseURL = 'https://gasfee-evw8.onrender.com'
 
 const app = createApp(App)
 app.use(router)

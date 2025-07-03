@@ -56,7 +56,7 @@ export default {
       this.message = "";
 
       try {
-        const response = await axios.post("http://localhost:8081/api/auth/forgot-password", {
+        const response = await axios.post("https://gasfee-evw8.onrender.com/api/auth/forgot-password", {
           email: this.email,
         });
 

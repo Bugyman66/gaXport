@@ -7,6 +7,7 @@ console.log("JWT_SECRET:", process.env.JWT_SECRET); // Debugging log
 const express = require("express");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
+const axios = require('axios');
 
 const authRoutes = require("./routes/authRoutes");
 const paystackRoutes = require("./routes/paystackRoutes");
@@ -80,6 +81,17 @@ app.get("/api/transactions", (req, res) => {
     } catch (error) {
         console.error("❌ JWT Verification Error:", error.message);
         res.status(500).json({ message: "Failed to fetch transactions" });
+    }
+});
+
+// Proxy route for CoinGecko API
+app.get('/api/coingecko/simple/price', async (req, res) => {
+    try {
+        const coingeckoUrl = `https://api.coingecko.com/api/v3/simple/price`;
+        const response = await axios.get(coingeckoUrl, { params: req.query });
+        res.json(response.data);
+    } catch (error) {
+        res.status(500).json({ message: 'Failed to fetch from CoinGecko', error: error.message });
     }
 });
 

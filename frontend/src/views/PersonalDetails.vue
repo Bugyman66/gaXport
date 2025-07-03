@@ -101,7 +101,7 @@ export default {
           throw new Error('Authentication required');
         }
 
-        const response = await fetch('http://localhost:8081/api/user/profile', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/user/profile', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -144,7 +144,7 @@ export default {
           throw new Error('Authentication required');
         }
 
-        const response = await fetch('http://localhost:8081/api/user/profile', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/user/profile', {
           method: 'PUT',
           headers: {
             'Authorization': `Bearer ${token}`,

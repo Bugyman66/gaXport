@@ -310,7 +310,7 @@ export default {
         }
 
         console.log('Fetching dashboard data...');
-        const response = await fetch('http://localhost:8081/api/admin/dashboard', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/admin/dashboard', {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -367,7 +367,7 @@ export default {
 
       try {
         const token = localStorage.getItem('admin_token');
-        const response = await fetch('http://localhost:8081/api/admin/update-rate', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/admin/update-rate', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -413,7 +413,7 @@ export default {
     async fetchExportData() {
       try {
         const token = localStorage.getItem('admin_token');
-        const response = await fetch('http://localhost:8081/api/admin/export-data', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/admin/export-data', {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -503,7 +503,7 @@ export default {
 
         console.log('Using token:', token); // Debug log
         
-        const response = await fetch(`http://localhost:8081/api/admin/vendor/${this.vendorEmail}`, {
+        const response = await fetch(`https://gasfee-evw8.onrender.com/api/admin/vendor/${this.vendorEmail}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -556,7 +556,7 @@ export default {
 
       try {
         const token = localStorage.getItem('admin_token');
-        const response = await fetch('http://localhost:8081/api/admin/update-vendor-balance', {
+        const response = await fetch('https://gasfee-evw8.onrender.com/api/admin/update-vendor-balance', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,
